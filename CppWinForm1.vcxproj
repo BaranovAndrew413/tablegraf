@@ -43,7 +43,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -139,11 +139,34 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="ArrayHashTable.cpp" />
+    <ClCompile Include="SortTable.cpp" />
+    <ClCompile Include="ScanTable.cpp" />
+    <ClCompile Include="TreeTable.cpp" />
+    <ClCompile Include="HashTable.cpp" />
+    <ClCompile Include="ArrayTable.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArrayTable.h" />
+    <ClInclude Include="HashTable.h" />
+    <ClInclude Include="TreeTable.h" />
+    <ClInclude Include="TreeNode.h" />
+    <ClInclude Include="Table.h" />
+    <ClInclude Include="ArrayHashTable.h" />
+    <ClInclude Include="TSortTable.h" />
+    <ClInclude Include="TScanTable.h" />
+    <ClInclude Include="Record.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="table.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
